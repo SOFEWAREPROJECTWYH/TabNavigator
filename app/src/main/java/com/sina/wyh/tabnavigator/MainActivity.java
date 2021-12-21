@@ -75,6 +75,15 @@ public class MainActivity extends AppCompatActivity {
         viewList.add(view2);
         viewList.add(view3);
         listPagerAdapter=new ListPagerAdapter(viewList);
+        button.setOnClickListener(v -> {
+            viewPager.setCurrentItem(0);
+        });
+        button2.setOnClickListener(v -> {
+            viewPager.setCurrentItem(1);
+        });
+        button3.setOnClickListener(v -> {
+            viewPager.setCurrentItem(2);
+        });
         viewPager.setAdapter(listPagerAdapter);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -84,7 +93,21 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
-
+                if (position==0){
+                    button.setBackgroundColor(Color.parseColor("#666666"));
+                    button2.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                    button3.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                }
+                if (position==1){
+                    button.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                    button2.setBackgroundColor(Color.parseColor("#666666"));
+                    button3.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                }
+                if (position==2){
+                    button.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                    button2.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                    button3.setBackgroundColor(Color.parseColor("#666666"));
+                }
             }
 
             @Override
