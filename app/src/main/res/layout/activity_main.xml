@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+    <TabHost
+        android:id="@+id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical">
+
+                <!-- 第一个tab的布局 -->
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/recommand"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="#CCCCCC"
+                            android:text="@string/recommend"
+                            android:layout_marginLeft="10dp"/>
+                        <Button
+                            android:id="@+id/technology"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="#CCCCCC"
+                            android:text="@string/technology"
+                            android:layout_marginLeft="10dp"/>
+                        <Button
+                            android:id="@+id/economy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="#CCCCCC"
+                            android:text="@string/economy"
+                            android:layout_marginLeft="10dp"/>
+                    </LinearLayout>
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/viewpager"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_marginTop="0dp"-->
+<!--                            android:orientation="vertical">-->
+<!--                            <ListView-->
+<!--                                android:id="@+id/list_item"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="600dp"-->
+<!--                                android:layout_marginTop="2dp"/>-->
+<!--                        </LinearLayout>-->
+                    </androidx.viewpager.widget.ViewPager>
+
+
+                </LinearLayout>
+
+                <!-- 第二个tab的布局 -->
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="0dp"
+                        android:orientation="vertical">
+                        <ListView
+                            android:id="@+id/list_item2"
+                            android:layout_width="match_parent"
+                            android:layout_height="620dp"
+                            android:layout_marginTop="30dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- 第三个tab的布局 -->
+                <LinearLayout
+                    android:id="@+id/tab3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="0dp"
+                        android:orientation="vertical">
+                        <ListView
+                            android:id="@+id/list_item3"
+                            android:layout_width="match_parent"
+                            android:layout_height="620dp"
+                            android:layout_marginTop="30dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!-- 第四个tab的布局 -->
+                <LinearLayout
+                    android:id="@+id/tab4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="0dp"
+                        android:orientation="vertical">
+                        <ListView
+                            android:id="@+id/list_item4"
+                            android:layout_width="match_parent"
+                            android:layout_height="620dp"
+                            android:layout_marginTop="30dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</RelativeLayout>
