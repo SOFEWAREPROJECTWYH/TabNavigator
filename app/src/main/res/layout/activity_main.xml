@@ -9,16 +9,16 @@
         android:id="@+id/tabhost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical" >
             <TabWidget
                 android:id="@android:id/tabs"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
             </TabWidget>
-
             <FrameLayout
                 android:id="@android:id/tabcontent"
                 android:layout_width="match_parent"
@@ -31,12 +31,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
-
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
                         <Button
                             android:id="@+id/recommand"
                             android:layout_width="wrap_content"
@@ -61,23 +61,21 @@
                             android:textColor="#CCCCCC"
                             android:text="@string/economy"
                             android:layout_marginLeft="10dp"/>
+
                     </LinearLayout>
-                    <androidx.viewpager.widget.ViewPager
-                        android:id="@+id/viewpager"
+                    <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-<!--                        <LinearLayout-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="match_parent"-->
-<!--                            android:layout_marginTop="0dp"-->
-<!--                            android:orientation="vertical">-->
-<!--                            <ListView-->
-<!--                                android:id="@+id/list_item"-->
-<!--                                android:layout_width="match_parent"-->
-<!--                                android:layout_height="600dp"-->
-<!--                                android:layout_marginTop="2dp"/>-->
-<!--                        </LinearLayout>-->
-                    </androidx.viewpager.widget.ViewPager>
+                        android:layout_height="wrap_content"
+                        android:layout_weight="9">
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/viewpager"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="100dp">
+                        </androidx.viewpager.widget.ViewPager>
+                    </LinearLayout>
+
+
 
 
                 </LinearLayout>
@@ -141,7 +139,7 @@
 
                 </LinearLayout>
             </FrameLayout>
-        </LinearLayout>
+        </RelativeLayout>
     </TabHost>
 
 </RelativeLayout>

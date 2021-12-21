@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         tabHost.addTab(tabHost.newTabSpec("tab2").setIndicator(null,getResources().getDrawable(R.drawable.search)).setContent(R.id.tab2));
         tabHost.addTab(tabHost.newTabSpec("tab3").setIndicator(null,getResources().getDrawable(R.drawable.address)).setContent(R.id.tab3));
         tabHost.addTab(tabHost.newTabSpec("tab4").setIndicator(null,getResources().getDrawable(R.drawable.mine)).setContent(R.id.tab4));
-        tabHost.getTabWidget().bringToFront();
+//        tabHost.getTabWidget().bringToFront();
         List<View> viewList = new ArrayList<>();
         LayoutInflater layoutInflater = getLayoutInflater();
         View view1 = layoutInflater.inflate(R.layout.list_pager1, null);
